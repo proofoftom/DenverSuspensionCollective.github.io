@@ -1,2 +1,8 @@
 [phases.setup]
-nixPkgs = ["ruby_3_3", "bundler", "rubyPackages_3_3.jekyll"]
+nixPkgs = ["ruby_3_3"]
+
+[phases.install]
+cmds = ["bundle install"]
+
+[phases.build]
+cmds = ["bundle exec jekyll build"]
